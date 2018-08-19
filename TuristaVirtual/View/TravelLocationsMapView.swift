@@ -12,13 +12,15 @@ import CoreData
 
 class TravelLocationsMapView: UIViewController, MKMapViewDelegate {
 
-    var dataController: DataController!
+    @IBOutlet weak var mapView: MKMapView!
     
-    var mapView: MKMapView!
+    var dataController: DataController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Virtual Tourist"
+        self.configureRegion()
+        self.fetchPins()
     }
     
     func fetchPins() {
@@ -28,12 +30,6 @@ class TravelLocationsMapView: UIViewController, MKMapViewDelegate {
                 self.addPointToMap(pin)
             }
         }
-    }
-    
-    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-        self.mapView = mapView
-        self.configureRegion()
-        self.fetchPins()
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -58,7 +54,7 @@ class TravelLocationsMapView: UIViewController, MKMapViewDelegate {
             let pin = Pin(context: dataController.viewContext)
             pin.x = Float(coordinate.latitude)
             pin.y = Float(coordinate.longitude)
-
+            
             try? dataController.viewContext.save()
             
             self.addPointToMap(pin)
@@ -87,6 +83,7 @@ class TravelLocationsMapView: UIViewController, MKMapViewDelegate {
     
         let photoAlbumView = self.storyboard!.instantiateViewController(withIdentifier: "PhotoAlbumView") as! PhotoAlbumView
         photoAlbumView.pin = pin
+        photoAlbumView.dataController = self.dataController
         
         self.navigationController?.pushViewController(photoAlbumView, animated: true)
     }
