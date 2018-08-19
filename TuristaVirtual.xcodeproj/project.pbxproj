@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		35B756E92128AACB00985962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B756E82128AACB00985962 /* AppDelegate.swift */; };
-		35B756EB2128AACB00985962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B756EA2128AACB00985962 /* ViewController.swift */; };
+		35B756EB2128AACB00985962 /* TravelLocationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B756EA2128AACB00985962 /* TravelLocationsMapView.swift */; };
 		35B756EE2128AACB00985962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B756EC2128AACB00985962 /* Main.storyboard */; };
 		35B756F02128AACB00985962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B756EF2128AACB00985962 /* Assets.xcassets */; };
 		35B756F32128AACB00985962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B756F12128AACB00985962 /* LaunchScreen.storyboard */; };
+		35B756FD2128C56200985962 /* TuristaVirtual.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35B756FB2128C56200985962 /* TuristaVirtual.xcdatamodeld */; };
+		35B756FF2128CE1700985962 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B756FE2128CE1700985962 /* DataController.swift */; };
+		35B757012128DE9400985962 /* CustomPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B757002128DE9400985962 /* CustomPinAnnotation.swift */; };
+		35B757032129073600985962 /* PhotoAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B757022129073600985962 /* PhotoAlbumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35B756E52128AACB00985962 /* TuristaVirtual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuristaVirtual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B756E82128AACB00985962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35B756EA2128AACB00985962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35B756EA2128AACB00985962 /* TravelLocationsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocationsMapView.swift; sourceTree = "<group>"; };
 		35B756ED2128AACB00985962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35B756EF2128AACB00985962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35B756F22128AACB00985962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35B756F42128AACB00985962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B756FC2128C56200985962 /* TuristaVirtual.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TuristaVirtual.xcdatamodel; sourceTree = "<group>"; };
+		35B756FE2128CE1700985962 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		35B757002128DE9400985962 /* CustomPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPinAnnotation.swift; sourceTree = "<group>"; };
+		35B757022129073600985962 /* PhotoAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		35B756E72128AACB00985962 /* TuristaVirtual */ = {
 			isa = PBXGroup;
 			children = (
+				35B757052129193500985962 /* Utils */,
+				35B757042129190B00985962 /* View */,
+				35B756FA2128C53100985962 /* Model */,
 				35B756E82128AACB00985962 /* AppDelegate.swift */,
-				35B756EA2128AACB00985962 /* ViewController.swift */,
 				35B756EC2128AACB00985962 /* Main.storyboard */,
 				35B756EF2128AACB00985962 /* Assets.xcassets */,
 				35B756F12128AACB00985962 /* LaunchScreen.storyboard */,
 				35B756F42128AACB00985962 /* Info.plist */,
 			);
 			path = TuristaVirtual;
+			sourceTree = "<group>";
+		};
+		35B756FA2128C53100985962 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35B756FB2128C56200985962 /* TuristaVirtual.xcdatamodeld */,
+				35B756FE2128CE1700985962 /* DataController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35B757042129190B00985962 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35B757022129073600985962 /* PhotoAlbumView.swift */,
+				35B756EA2128AACB00985962 /* TravelLocationsMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35B757052129193500985962 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				35B757002128DE9400985962 /* CustomPinAnnotation.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35B756EB2128AACB00985962 /* ViewController.swift in Sources */,
+				35B757012128DE9400985962 /* CustomPinAnnotation.swift in Sources */,
+				35B756FD2128C56200985962 /* TuristaVirtual.xcdatamodeld in Sources */,
+				35B756FF2128CE1700985962 /* DataController.swift in Sources */,
+				35B756EB2128AACB00985962 /* TravelLocationsMapView.swift in Sources */,
 				35B756E92128AACB00985962 /* AppDelegate.swift in Sources */,
+				35B757032129073600985962 /* PhotoAlbumView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +315,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NF99SGU6J8;
 				INFOPLIST_FILE = TuristaVirtual/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harbsti.TuristaVirtual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +331,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NF99SGU6J8;
 				INFOPLIST_FILE = TuristaVirtual/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harbsti.TuristaVirtual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -320,6 +364,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		35B756FB2128C56200985962 /* TuristaVirtual.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				35B756FC2128C56200985962 /* TuristaVirtual.xcdatamodel */,
+			);
+			currentVersion = 35B756FC2128C56200985962 /* TuristaVirtual.xcdatamodel */;
+			path = TuristaVirtual.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 35B756DD2128AACB00985962 /* Project object */;
 }
